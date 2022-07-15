@@ -1,14 +1,18 @@
-import React from "react";
 
-import Header from "./interface/Header";
-import MealsSummary from "./interface/MealsSummary";
+
+import { CartProvider } from './components/context/cart-context';
+import Header from "./components/layout/Header";
+import Meals from "./components/content/Meals";
 
 function App() {
+
   return (
-    <React.Fragment >
+    <CartProvider>
       <Header />
-      <MealsSummary />
-    </React.Fragment>
+      <main>
+        <Meals />
+      </main>
+    </CartProvider>
   );
 }
 
