@@ -32,8 +32,8 @@
   font: inherit;
   color: #5a1a01;
   cursor: pointer;
+  border: 1px solid #8a2b06;
   background-color: transparent;
-  border: none;
   border-radius: 25px;
   padding: 0.5rem 2rem;
 }

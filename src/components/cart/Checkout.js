@@ -46,6 +46,12 @@ const Checkout = props => {
       return;
     }
     // Submit cart data
+    props.onConfirm({
+      name: enteredName,
+      street: enteredStreet,
+      zip: enteredZip,
+      city: enteredCity
+    });
   };
 
   return (
@@ -71,7 +77,8 @@ const Checkout = props => {
         {!formValidity.city && <p>Please enter a valid city!</p>}
       </div>
       <div className={classes.actions}>
-        <button type='button' onClick={props.onCancel}>
+        <button
+          type='button' onClick={props.onCancel}>
           Cancel</button>
         <button className={classes.submit}>
           Confirm</button>
